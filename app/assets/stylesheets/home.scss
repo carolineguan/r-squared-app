@@ -9,6 +9,10 @@
 body>h2 {
   margin: 16px;
 }
+
+body {
+  margin-top: 25px;
+}
 table {
   max-width: 100%;
   padding: 24px;
@@ -109,4 +113,8 @@ div.hidden { display: none; }
 
 #header-container {
   margin-bottom: 70px;
+}
+
+.container {
+    margin-top: 20px;
 }
