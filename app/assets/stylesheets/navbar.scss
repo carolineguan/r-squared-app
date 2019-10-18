@@ -1,0 +1,55 @@
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #00004d;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  
+#r-title {
+  height: 100px;
+  width: 100px!important ;
+  float: center; 
+  height: 100px; 
+  width: 100px; 
+  margin-left: 10px;
+  color:white;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+#two-title {
+  height: 100px;
+  width: 100px!important ;
+  float: center; 
+  height: 100px; 
+  width: 100px; 
+  color:white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+.img_container {
+  //as of now, this is how the nav items are centered ;/
+  margin-bottom: 150px;
+  margin-left: 20px;
+}

@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap";
+
 * {
   box-sizing: border-box;
 }
@@ -27,11 +30,19 @@ html, body {
     
 }
 
+body {
+    //use for the sidenav
+    //can change to more media friendly later
+    margin-left: 200px;
+} 
+
+
 header {
     background-color: #5a0a25;
     text-align:center;
 }
 
+// <<<<<<< HEAD
 nav {
     font-family: 'Montserrat', sans-serif;
     background: #5a0a25;
@@ -66,9 +77,15 @@ nav>a.active {
 }
 
 .btn {
-    display: block;
-    padding: 15px;
+    // display: block;
+    // padding: 15px;
     width: 100%;
+// =======
+// .btn {
+    display: block;
+    padding: 16px;
+    // width: 45%;
+// >>>>>>> 8a8df076e245d7a46409b86d855d46e4c226209b
     transition-duration: 0.4s;
     background-color: #7490FF;
     color: white;

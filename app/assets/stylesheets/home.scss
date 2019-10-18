@@ -9,6 +9,10 @@
 body>h2 {
   margin: 16px;
 }
+
+body {
+  margin-top: 25px;
+}
 table {
   max-width: 100%;
   padding: 24px;
@@ -35,7 +39,12 @@ td {
 
 div.hidden { display: none; }
 
-
+.home-header p{
+  font-size: 25px;
+  color: #00004d;
+  padding: 6px 6px 6px 32px;
+  font-weight: bolder;
+}
 
 #booking_reason{
   max-width: 30%;
@@ -81,4 +90,31 @@ div.hidden { display: none; }
 
 .right {
   width: 25%;
+}
+
+#reserv-container, #show-hist {
+  text-align: center;
+  display: inline-block;
+}
+
+#show-hist-btn {
+  background-color: #00004d;
+  color: white;
+}
+
+#welcom-text p{
+  padding: 6px 6px 6px 32px;
+  float: right;
+  color: #00004d;
+  font-size: 25px;
+  text-align: right;
+  font-weight: bolder;
+}
+
+#header-container {
+  margin-bottom: 70px;
+}
+
+.container {
+    margin-top: 20px;
 }
