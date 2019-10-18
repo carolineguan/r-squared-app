@@ -10,11 +10,19 @@
   </head>
   <body>
     <%= render './layouts/nav.html.erb' %>
-    <main>
-      <fieldset id="search_area">
-        <legend>Advanced Search</legend>
+     <nav1 style = "height: 780px; background-color:#FFFFFF;float: left;width: 20%;margin-bottom: 0;padding-top: 20px;font-size: 20px;color: #041B52;top:0;">
+              <h2>FIND</h2>
+              <br><br><br><br>
+
+              <br><%= link_to "Facilility" %>
+              <br><%= link_to "Size" %>
+              <br><%= link_to "Location" %>
+              <br><%= link_to "Time" %>
+
+  </nav1>
+   <main>
           <%= form_tag({:controller => "results", :action => "index"}, method: :get) do %>
-          <h1 class="heading">Room Preferences</h1>
+          <h1 class="heading">Facilities</h1>
 
           <%= label_tag(:building_name, "Building") %>
           <%= collection_select :room, :building_name,
@@ -45,8 +53,8 @@
           Room.select('DISTINCT tech'),
           :tech, :tech, {include_blank: 'Any'} %>
           
-          <!-- to implement later on, idk how to merge the data together -->
-          <!--<div class="heading">Reservation Period</div>-->
+           <!--to implement later on, idk how to merge the data together
+          <div class="heading">Reservation Period</div>-->
           
           <br>
           <%= label_tag(:startdate, "Start Date") %>
@@ -65,8 +73,8 @@
           <%= time_field(:booking, :endtime, value: "23:59") %>
           <%= submit_tag 'Search' %>
         <% end %>
-      </fieldset>
     </main>
+
     
      <center>
      <div class="container" style="background-color: red">
@@ -81,4 +89,3 @@
       <%= debug(params) if Rails.env.development? %>
   </div>
 </html>
-
