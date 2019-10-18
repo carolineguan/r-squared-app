@@ -9,33 +9,42 @@
     
   
         
-    <body>
-         <img src="/assets/logo.jpg" alt = "logo" style= "width: 100px; height: 100px; margin-left: 1200px;"></img>
-        <div id="welcome_page_container">
-            <div id="about">
+    <body id = "signup-body" >
+         <!--<img src="/assets/logo.jpg" alt = "logo" style= "width: 100px; height: 100px; margin-left: 1200px;"></img>-->
+        <!--<div id="welcome_page_container">-->
+        <!--    <div id="about">-->
               
-               <div class="/feature_img_container">
-                <p class="bottomleft">We are a room reservation application that makes life eaiser.</p>
-                <img class = "feature_img" src="/assets/zach.jpg" alt = "zach"></img>
+        <!--       <div class="/feature_img_container">-->
+        <!--        <p class="bottomleft">We are a room reservation application that makes life eaiser.</p>-->
+        <!--        <img class = "feature_img" src="/assets/zach.jpg" alt = "zach"></img>-->
                 
-              </div>
+        <!--      </div>-->
               
-            </div>
-            
+        <!--    </div>-->
+        <div >    
             <div id="login_form_container" width="50%">
               <center>
-                <h2>Create New Account</h2>
+                
+                <div class="tab"><%= link_to "SIGN IN", root_path , :ID => "sNonActive"%></div>
+                <div class="tab-active"><%= link_to "SIGN UP", new_user_path , :ID => "sActive"%></div>
+                
+                
+                
                  <%= form_for @user, :url => { :action => "create" }, html: {class: "tobestyled"} do |f| %>
          
-                     <label>Name</label>
-                     <%= f.text_field :name %>
+                     <label>Username</label>
+                     <!--<%= f.text_field :name  %>-->
+                     <input id = "user" name="user[name]" type = "text" placeholder = "Your name" required/>
                      
                      <br>
                      <label>Email</label>
-                     <%= f.text_field :email %>
+                     <!--<%= f.text_field :email %>-->
+                     <input id = "user" name="user[email]" type = "text" placeholder = "example@mail.com" required/>
                      
                      <label>Create Password</label>
-                     <%= f.password_field :password %>
+                     <!--<%= f.password_field :password %>-->
+                     <input id = "user" name="user[password]" type = "text" placeholder = "Be a minimum of eight (8) characters in length" required/>
+                     
                     <div style="display: none;">
                         <label>Classification</label>
                          <fieldset>
@@ -44,9 +53,9 @@
                          </fieldset>
                      </div>
                       
-                    <%= f.submit "Create Account" %>
+                    <%= f.submit "CREATE ACCOUNT", :class => "btn"%>
                     
-                    <%= link_to "Cancel", root_path, :class => "btn" %>
+                
                     <center>
                       <div class="container" style="background-color: red">
                       <% flash.each do |key, value| %>
@@ -62,9 +71,9 @@
         </div>
         
     </body>
-    <body>
-    <div class="container">
-      <%= debug(params) if Rails.env.development? %>
-    </div>
-  </body>
+  <!--  <body>-->
+  <!--  <div class="container">-->
+  <!--    <%= debug(params) if Rails.env.development? %>-->
+  <!--  </div>-->
+  <!--</body>-->
 </html>

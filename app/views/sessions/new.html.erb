@@ -9,33 +9,55 @@
     
      
     
-    <body>
-         <img src="/assets/logo.jpg" alt = "logo" style= "width: 100px; height: 100px; margin-left: 1200px;"></img>
-        <div id="welcome_page_container">
-            <div id="about">
-               <div class="feature_img_container">
+    <body id = "login-body">
+         <!--<img src="/assets/logo.jpg" alt = "logo" style= "width: 100px; height: 100px; margin-left: 1200px;"></img>-->
+        <!--<div id="welcome_page_container">-->
+            <!--<div id="about">-->
+            <!--   <div class="feature_img_container">-->
 
-                <p class="bottomleft">We are a room reservation application that makes life eaiser.</p>
-                <img class = "feature_img" src= "/assets/zach.jpg" alt = "zach"></img>
+            <!--    <p class="bottomleft">We are a room reservation application that makes life eaiser.</p>-->
+            <!--    <img class = "feature_img" src= "/assets/zach.jpg" alt = "zach"></img>-->
                
-              </div>
+            <!--  </div>-->
               
-            </div>
-            <div id="login_form_container" width="50%">
+            <!--</div>-->
+ 
+         <div >   
+            <div id="login_form_container">
               <center>
-                <h2>Login to your account</h2>
+                 
+                <div class="tab-active"><%= link_to "SIGN IN", root_path , :ID => "lActive"%></div>
+                <div class="tab"><%= link_to "SIGN UP", new_user_path , :ID => "lNonActive"%></div>
+                  
+                  
+                
                 <form accept-charset="UTF-8" action="/login" method="post">
                   <input name="utf8" type="hidden" value="&#x2713;" />
                   <input name="authenticity_token" type="hidden"
                          value="NNb6+J/j46LcrgYUC60wQ2titMuJQ5lLqyAbnbAUkdo=" />
-                  <label for="session_email">Email</label>
-                  <input class="form-control" id="session_email"
-                         name="session[email]" type="text" />
-                  <label for="session_password">Password</label>
-                  <input id="session_password" name="session[password]"
-                         type="password" />
-                  <input class="btn btn-primary" name="commit" type="submit"
-                       value="Log in" />
+                  
+                  <div class = "input-field">
+                      <label for="session_email">Email</label>
+                      <input class="form-control" id="session_email"
+                         name="session[email]" type="text" required/>
+                  </div>
+                  
+                  <div class = "input-field">
+                      <label for="session_password">Password</label>
+                      <input id="session_password" name="session[password]"
+                             type="password" required />
+                  </div>    
+                  
+                  <div class = "input-field">
+                      <input class="btn btn-primary" name="commit" type="submit"
+                       value="LOG IN" />
+                  </div>
+                  
+                  <div class = "input-field">
+                      <%= link_to "Forget your password?", root_path , :ID => "forgetLink"%>
+                  </div>
+                  
+                  
                 </form>
                 
                <div class="container" style="background-color: red">
@@ -44,14 +66,14 @@
                 <% end %>
                 <%= yield %>
               </div>
-              <%= link_to "New User? Create Account", new_user_path %>
+              
               </center>
             </div>
         </div>
     </body>
-    <body>
-    <div class="container">
-      <%= debug(params) if Rails.env.development? %>
-    </div>
-  </body>
+  <!--  <body>-->
+  <!--  <div class="container">-->
+  <!--    <%= debug(params) if Rails.env.development? %>-->
+  <!--  </div>-->
+  <!--</body>-->
 </html>
