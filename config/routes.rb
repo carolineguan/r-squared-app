@@ -47,6 +47,7 @@ Rails.application.routes.draw do
    resources :sessions
    resources :calendar
    resources :calendar_bookings
+   resources :password_resets
    
    get "*path", to: redirect('/')
 end
