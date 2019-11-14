@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_01_210802) do
+ActiveRecord::Schema.define(version: 2019_11_14_012513) do
 
   create_table "bookings", force: :cascade do |t|
     t.string "building_name"
@@ -48,7 +48,9 @@ ActiveRecord::Schema.define(version: 2019_11_01_210802) do
     t.string "usertype"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "auth_token"
+    t.string "reset_digest"
+    t.string "password_reset_token"
+    t.datetime "password_reset_sent_at"
   end
 
 end

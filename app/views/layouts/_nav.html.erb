@@ -6,12 +6,11 @@
           <span id="r-title"> R</span> <span class="align-text-bottom" id ="two-title">2</span>
       </div>
     </div>
-    <div class="container">
-      <a> <%= link_to "Home", home_path %></a>
-      <a> <%= link_to "Browsing Search", browsingsearch_path %></a>
-      <a> <%= link_to "Calendar", calendar_path%>
-      <a> <%= link_to "Advanced Search", advancedsearch_path %></a>
-      <a> <%= link_to "Log out", logout_path, method: :delete %></a>
+    <div class="container" id="side-nav-obj">
+      <a> <%= link_to image_submit_tag("icons/Homepage@2x.png", class: "side-nav-imgs", alt: "home page"), home_path %> </a>
+      <a> <%= link_to image_submit_tag("icons/Search@2x.png", class: "search-button"), browsingsearch_path %></a>
+      <a> <%= link_to image_submit_tag("icons/Calender@2x.png", class: "side-nav-imgs"), calendar_path%>
+      <a> <%= link_to "Log out", logout_path, method: :delete %>
     </div>
   </div>
 </html>

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'password_resets/new'
+  get 'password_resets/edit'
   get 'booking/index'
 # For styled pages
   root 'sessions#new'
@@ -47,7 +49,7 @@ Rails.application.routes.draw do
    resources :sessions
    resources :calendar
    resources :calendar_bookings
-   resources :password_resets
+   resources :password_resets,     only: [:new, :create, :edit, :update]
    
    get "*path", to: redirect('/')
 end

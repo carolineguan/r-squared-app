@@ -1,8 +1,6 @@
 class UserMailer < ApplicationMailer
-
-  def password_reset(user)
-  	@user = user
- 	mail :to => user.email, :subject => "Password Reset"
- 	end
- 	user_mail
- end
+    def forgot_password(user)
+        @user = user
+        mail(to: @user.email, subject: 'Welcome to My Awesome Site')
+    end
+end
